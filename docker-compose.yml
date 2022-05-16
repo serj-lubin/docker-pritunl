@@ -5,16 +5,11 @@ services:
     image: 'jippi/pritunl:latest'
     privileged: true
     ports:
-      - '80:80'
-      - '443:443'
+#       - '80:80'
+      - '127.0.0.1:8443:443'
       - '1194:1194/udp'
-      - '1194:1194/tcp'
+#       - '1194:1194/tcp'
     volumes:
-      - 'pritunl_data:/var/lib/pritunl'
-      - 'pritunl_db:/var/lib/mongodb'
+      - './pritunl_data:/var/lib/pritunl'
+      - './pritunl_db:/var/lib/mongodb'
 
-volumes:
-  pritunl_data:
-    driver: local
-  pritunl_db:
-    driver: local
