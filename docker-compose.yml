@@ -2,7 +2,7 @@ version: '3'
 
 services:
   pritunl:
-    image: 'jippi/pritunl:latest'
+    image: 'jippi/pritunl:1.30.3157.70'
     privileged: true
     ports:
 #       - '80:80'
@@ -12,4 +12,5 @@ services:
     volumes:
       - './pritunl_data:/var/lib/pritunl'
       - './pritunl_db:/var/lib/mongodb'
+    netwotk: host
 
