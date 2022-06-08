@@ -12,5 +12,5 @@ services:
     volumes:
       - './pritunl_data:/var/lib/pritunl'
       - './pritunl_db:/var/lib/mongodb'
-    netwotk: host
+
 
